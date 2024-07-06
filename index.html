@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Slider with Two Different Sidebars | Swiper JS</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <audio id="background-music" loop>
+      <source
+        src="https://www.chosic.com/wp-content/uploads/2021/06/Sweet(chosic.com).mp3"
+        type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <button id="play-pause-button">
+      <ion-icon
+        class="audio-icon"
+        id="play-music"
+        name="play-circle-outline"></ion-icon>
+      <ion-icon
+        class="audio-icon hidden"
+        id="pause-music"
+        name="pause-circle-outline"></ion-icon>
+    </button>
+
+    <section>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="gradient"></div>
+            <h1 data-animate="bottom" class="title">Dua Lipa</h1>
+            <img class="hero" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/cee8040b-a98f-469e-b106-66ab49a41c32" alt="dua lipa" loading="lazy" />
+            <div class="box-container">
+              <div data-animate="bottom" class="box songs">
+                <h1 style="align-self: center">Songs</h1>
+                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/a8369951-13b2-4e17-a112-af8ce697b1d3" alt="" loading="lazy" />
+                <h3>Dua Lipa</h3>
+                <p>Levitating</p>
+                <button class="more-btn" data-modal="dua-songs">
+                  <ion-icon
+                    class="more-btn-icon"
+                    name="add-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="box-mobile" data-modal="dua-songs">
+                <h1 style="align-self: center">Songs</h1>
+              </div>
+              <div data-animate="bottom" class="box overview">
+                <h1 style="align-self: center">Overview</h1>
+                <p>
+                  Dua Lipa is a famous singer from the United Kingdom. She was
+                  born on August 22, 1995, in London, England. Dua's love for
+                  music started when she was a kid...
+                </p>
+                <button class="more-btn" data-modal="dua-bio">
+                  <ion-icon
+                    class="more-btn-icon"
+                    name="add-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="box-mobile" data-modal="dua-bio">
+                <h1 style="align-self: center">Overview</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="gradient"></div>
+            <h1 data-animate="bottom" class="title">Taylor Swift</h1>
+            <img
+              class="hero"
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/956c1e41-3164-4141-bfdc-3cd3dcb09473"
+              alt="taylor swift" loading="lazy" />
+            <div class="box-container">
+              <div data-animate="bottom" class="box songs">
+                <h1 style="align-self: center">Songs</h1>
+                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/6f3b9928-c597-4e5b-b776-098cbc5207b3" alt="" loading="lazy" />
+                <h3>Taylor Swift</h3>
+                <p>Blank Space</p>
+                <button class="more-btn" data-modal="taylor-songs">
+                  <ion-icon
+                    class="more-btn-icon"
+                    name="add-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="box-mobile" data-modal="taylor-songs">
+                <h1 style="align-self: center">Songs</h1>
+              </div>
+              <div data-animate="bottom" class="box overview">
+                <h1 style="align-self: center">Overview</h1>
+                <p>
+                  Taylor Swift is a famous singer from the United States. She
+                  was born on December 13, 1989, in Reading, Pennsylvania. When
+                  Taylor was a young girl...
+                </p>
+                <button class="more-btn" data-modal="taylor-bio">
+                  <ion-icon
+                    class="more-btn-icon"
+                    name="add-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="box-mobile" data-modal="taylor-bio">
+                <h1 style="align-self: center">Overview</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="gradient"></div>
+            <h1 data-animate="bottom" class="title">Ed Sheeran</h1>
+            <img class="hero" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/567bafa8-61d5-4c2f-82da-858061c7b706" alt="ed sheeran" loading="lazy" />
+            <div class="box-container">
+              <div data-animate="bottom" class="box songs">
+                <h1 style="align-self: center">Songs</h1>
+                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/83bab099-74d4-4ab4-aecd-3b6c8cb131cf" alt="" loading="lazy" />
+                <h3>Ed Sheeran</h3>
+                <p>Shape of You</p>
+                <button class="more-btn" data-modal="ed-songs">
+                  <ion-icon
+                    class="more-btn-icon"
+                    name="add-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="box-mobile" data-modal="ed-songs">
+                <h1 style="align-self: center">Songs</h1>
+              </div>
+              <div data-animate="bottom" class="box overview">
+                <h1 style="align-self: center">Overview</h1>
+                <p>
+                  Ed Sheeran is a famous singer and songwriter from England. He
+                  was born on February 17, 1991, in Hebden Bridge, West
+                  Yorkshire...
+                </p>
+                <button class="more-btn" data-modal="ed-bio">
+                  <ion-icon
+                    class="more-btn-icon"
+                    name="add-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="box-mobile" data-modal="ed-bio">
+                <h1 style="align-self: center">Overview</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="gradient"></div>
+            <h1 data-animate="bottom" class="title">Katy Perry</h1>
+            <img class="hero" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/60f7b623-087d-47c4-b091-10936fd2c16f" alt="katy perry" loading="lazy" />
+            <div class="box-container">
+              <div data-animate="bottom" class="box songs">
+                <h1 style="align-self: center">Songs</h1>
+                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/9112440a-a0f0-4203-8ddc-3186cef4e29f" alt="" loading="lazy" />
+                <h3>Katy Perry</h3>
+                <p>This is How We Do</p>
+                <button class="more-btn" data-modal="katy-songs">
+                  <ion-icon
+                    class="more-btn-icon"
+                    name="add-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="box-mobile" data-modal="katy-songs">
+                <h1 style="align-self: center">Songs</h1>
+              </div>
+              <div data-animate="bottom" class="box overview">
+                <h1 style="align-self: center">Overview</h1>
+                <p>
+                  Katy Perry is a famous singer and songwriter from the United
+                  States. She was born on October 25, 1984, in Santa Barbara,
+                  California...
+                </p>
+                <button class="more-btn" data-modal="katy-bio">
+                  <ion-icon
+                    class="more-btn-icon"
+                    name="add-circle-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="box-mobile" data-modal="katy-bio">
+                <h1 style="align-self: center">Overview</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sidebars -->
+    <div class="sidebar" id="dua-songs">
+      <div class="sidebar-container song-list-container">
+        <div class="sidebar-header">
+          <button class="close-btn">
+            <ion-icon class="close-icon" name="arrow-back-outline"></ion-icon
+            >Back
+          </button>
+        </div>
+        <div class="song-list-body">
+          <h1>Songs</h1>
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e3be4bc0-7968-470f-825f-c4be551c75b2" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>Levitating</h4>
+              <p>Dua Lipa</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/fc9aeb60-085b-422d-9c4a-e1770bf4c216" alt=""  loading="lazy" />
+            <div class="song-title">
+              <h4>Physical</h4>
+              <p>Dua Lipa</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/9278b860-d777-4bd7-96fd-de10c7c983f3" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>Be The One</h4>
+              <p>Dua Lipa</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b1ca72d1-d975-4471-8452-a60a1a339f56" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>New Rules</h4>
+              <p>Dua Lipa</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/f762770b-6a8e-45a6-884c-54bda85245c9" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>IDGAF</h4>
+              <p>Dua Lipa</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="dua-bio">
+      <div class="sidebar-container">
+        <div class="sidebar-header">
+          <button class="close-btn">
+            <ion-icon class="close-icon" name="arrow-back-outline"></ion-icon
+            >Back
+          </button>
+        </div>
+        <div class="sidebar-body bio">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/71aab672-117e-4ffd-b300-558bb8ad4cca" alt="" loading="lazy" />
+          <p>
+            Dua Lipa is a famous singer from the United Kingdom. She was born on
+            August 22, 1995, in London, England. Dua's love for music started
+            when she was a kid. She began singing and even created covers of
+            songs to share on the internet. Her first big hit was "New Rules,"
+            which became a worldwide sensation.
+          </p>
+          <p>
+            In 2017, she released her self-titled debut album, "Dua Lipa," which
+            had songs like "Be the One" and "IDGAF." People loved her music, and
+            she won awards for her songs and albums.
+          </p>
+          <p>
+            Dua Lipa is known for her cool style and her powerful voice. She's a
+            talented songwriter and has a lot of hit songs that many people
+            enjoy, including "Don't Start Now" and "Levitating."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="taylor-songs">
+      <div class="sidebar-container song-list-container">
+        <div class="sidebar-header">
+          <button class="close-btn">
+            <ion-icon class="close-icon" name="arrow-back-outline"></ion-icon
+            >Back
+          </button>
+        </div>
+        <div class="song-list-body">
+          <h1>Songs</h1>
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2c00793c-55a7-4b4e-946d-9a281f930610" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>Blank Space</h4>
+              <p>Taylor Swift</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/82c45a56-d9de-4023-a3fd-ff5e1086f8a2" alt="" />
+            <div class="song-title">
+              <h4>Shake It Off</h4>
+              <p>Taylor Swift</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2121357a-262c-4e51-ab2b-f316c1555a7b" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>Delicate</h4>
+              <p>Taylor Swift</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="taylor-bio">
+      <div class="sidebar-container">
+        <div class="sidebar-header">
+          <button class="close-btn">
+            <ion-icon class="close-icon" name="arrow-back-outline"></ion-icon
+            >Back
+          </button>
+        </div>
+        <div class="sidebar-body">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/014c7224-ead9-480b-9c89-2bae4ea9e7a6" alt="" loading="lazy" />
+          <p>
+            Taylor Swift is a famous singer from the United States. She was born
+            on December 13, 1989, in Reading, Pennsylvania. When Taylor was a
+            young girl, she loved singing and writing songs. She started
+            performing at local events and fairs. Her family moved to Nashville,
+            Tennessee, which is a big city for country music, to help her music
+            career.
+          </p>
+          <p>
+            In 2006, Taylor Swift released her first album, which had country
+            songs. One of her first hits was "Tim McGraw." Her music was loved
+            by many people who liked country songs.
+          </p>
+          <p>
+            As Taylor got older, she started making more pop and rock music. Her
+            album "Fearless" in 2008 was a huge success and won many awards,
+            including Grammy Awards. She continued to make hit songs like "Love
+            Story" and "You Belong with Me."
+          </p>
+          <p>
+            Taylor is also known for writing her songs based on her personal
+            experiences and feelings. She wrote many songs about love and
+            relationships. She's a well-loved artist all around the world, and
+            her music has made a big impact on the music industry.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="ed-songs">
+      <div class="sidebar-container song-list-container">
+        <div class="sidebar-header">
+          <button class="close-btn">
+            <ion-icon class="close-icon" name="arrow-back-outline"></ion-icon
+            >Back
+          </button>
+        </div>
+        <div class="song-list-body">
+          <h1>Songs</h1>
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/5f34ef23-402f-4199-9c2f-0b133a3fe0f3" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>Shape of You</h4>
+              <p>Ed Sheeran</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7eb5d150-0825-4891-a6ee-257067475825" alt="" />
+            <div class="song-title">
+              <h4>Perfect</h4>
+              <p>Ed Sheeran</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/6a7e7b8e-04cf-46db-b2dc-6de3dcefc2a0" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>Thinking Out Loud</h4>
+              <p>Ed Sheeran</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="ed-bio">
+      <div class="sidebar-container">
+        <div class="sidebar-header">
+          <button class="close-btn">
+            <ion-icon class="close-icon" name="arrow-back-outline"></ion-icon
+            >Back
+          </button>
+        </div>
+        <div class="sidebar-body">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/572a1246-a4b0-4691-8413-7383a9dd19b2" alt="" loading="lazy" />
+          <p>
+            Ed Sheeran is a famous singer and songwriter from England. He was
+            born on February 17, 1991, in Hebden Bridge, West Yorkshire. Ed fell
+            in love with music at a young age and started singing in a church
+            choir when he was just four years old. When he was eleven, he got
+            his first guitar and learned to play it by himself. He started
+            writing songs and became really good at it. His mom and dad
+            supported his love for music.
+          </p>
+          <p>
+            In 2008, Ed moved to London to chase his dream of becoming a
+            musician. He played at small places and open mic nights. People
+            started to notice him, and his career took off.
+          </p>
+          <p>
+            In 2011, Ed released his first album called "+." It had songs like
+            "The A Team" and "Lego House," which became big hits. Everyone loved
+            his music, and he won awards, like the BRIT Award for Best British
+            Male Solo Artist.
+          </p>
+          <p>
+            His second album, "x," came out in 2014 and made him even more
+            famous. Songs like "Sing" and "Thinking Out Loud" were huge hits.
+            Ed's music was special because it was sincere and easy to relate to.
+            He didn't stop there. Ed explored different music styles, like pop,
+            R&B, and hip-hop. His 2017 album, "÷," had songs like "Shape of You"
+            and "Castle on the Hill." People loved it.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="katy-songs">
+      <div class="sidebar-container song-list-container">
+        <div class="sidebar-header">
+          <button class="close-btn">
+            <ion-icon class="close-icon" name="arrow-back-outline"></ion-icon
+            >Back
+          </button>
+        </div>
+        <div class="song-list-body">
+          <h1>Songs</h1>
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e9f76476-a99d-4651-9881-705694900286" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>This is How We Do</h4>
+              <p>Katy Perry</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/28ab3242-a324-40e2-9499-5c132b231faa" alt="" />
+            <div class="song-title">
+              <h4>Roar</h4>
+              <p>Katy Perry</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/403a1574-191a-492c-b3d0-5bd9892001d2" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>Firework</h4>
+              <p>Katy Perry</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+
+          <div class="song-item">
+            <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3ccd99c5-5137-4bd1-8ec9-d47010b24c64" alt="" loading="lazy" />
+            <div class="song-title">
+              <h4>Hot N Cold</h4>
+              <p>Katy Perry</p>
+            </div>
+            <a href="#">
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="katy-bio">
+      <div class="sidebar-container">
+        <div class="sidebar-header">
+          <button class="close-btn">
+            <ion-icon class="close-icon" name="arrow-back-outline"></ion-icon
+            >Back
+          </button>
+        </div>
+        <div class="sidebar-body">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3810f97b-28e6-4af5-a3d9-8cefe993009e" alt="" loading="lazy" />
+          <p>
+            Katy Perry is a famous singer and songwriter from the United States.
+            She was born on October 25, 1984, in Santa Barbara, California. Her
+            real name is Katheryn Elizabeth Hudson. Katy's love for music
+            started at a young age, and she began singing in church when she was
+            a child. She even released a Christian music album under her real
+            name before becoming Katy Perry.
+          </p>
+          <p>
+            In 2008, Katy Perry released her breakthrough single "I Kissed a
+            Girl," which became a massive hit. This song, along with her album
+            "One of the Boys," made her a music star. She is known for her pop
+            music and colorful, creative music videos.
+          </p>
+          <p>
+            One of her most famous songs is "Firework," which became an anthem
+            of self-empowerment and hope. Katy's music is catchy and fun, and
+            many people around the world enjoy it.
+          </p>
+          <p>
+            She has won several awards for her music, including Grammy Awards.
+            Katy Perry is also known for her unique style and costumes, often
+            appearing in eye-catching outfits.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+<script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
+<script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
